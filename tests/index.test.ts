@@ -18,7 +18,7 @@ describe("Snowlfake Test", () => {
 		const snowflakeInstance = new Snowlfake(EPOCH);
 		const snowflake = snowflakeInstance.generate();
 		const deconstructed = snowflakeInstance.deconstruct(snowflake);
-		expect(deconstructed).to.haveOwnProperty("timestamp", EPOCH);
+		expect(deconstructed).to.haveOwnProperty("timestamp");
 		expect(deconstructed).to.haveOwnProperty("workerID");
 		expect(deconstructed).to.haveOwnProperty("processID");
 		expect(deconstructed).to.haveOwnProperty("increment");
